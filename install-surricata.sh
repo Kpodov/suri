@@ -8,6 +8,7 @@ sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get -y install suricata
 echo 'Suricata installation: done'
+sudo cp suricata.yaml /etc/suricata/
 echo ' '
 echo '  ====================================='
 pip install --pre --upgrade suricata-update
@@ -29,8 +30,6 @@ echo 'Rules installed:'
 sudo suricata-update list-enabled-sources
 sleep 6
 cp .bash_aliases /home/$USER/.bash_aliases
-sudo cp suricata.yaml /etc/suricata/
-
 source ~/.bashrc
 echo 'to run Suricata, type:  sur-on'
 sleep 1
