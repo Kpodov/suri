@@ -1,4 +1,4 @@
-alias rfsh='source ~/.bashrc'
+alias rfrsh='source ~/.bashrc'
 alias sur-on='/usr/bin/suricata -c /etc/suricata/suricata.yaml --pidfile /var/run/suricata.pid -i eth0 -D -v'
 alias sur-off='sudo service suricata stop'
 alias sur-cfg='nano /etc/suricata/suricata.yaml'
