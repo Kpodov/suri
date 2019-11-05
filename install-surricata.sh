@@ -7,6 +7,7 @@ sudo apt-get -y install libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-
 sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get -y install suricata
+ssh-keygen -b 2048 -t rsa -f /home/$USER/.ssh/id_rsa -q -N "" > /dev/null
 echo 'Suricata installation: done'
 sudo cp suricata.yaml /etc/suricata/
 echo ' '
