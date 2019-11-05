@@ -42,4 +42,4 @@ sleep 1
 echo 'to get all the logs:    sur-log '
 sleep 5
 echo 'Done! Look at aliases for more shortcuts!!!'
-ssh-keygen -b 2048 -t rsa -f /home/$USER/.ssh/id_rsa -q -N "" > /dev/null
+#ssh-keygen -b 2048 -t rsa -f /home/$USER/.ssh/id_rsa -q -N "" > /dev/null
