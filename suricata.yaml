@@ -98,11 +98,11 @@ outputs:
       enabled: yes
       filename: fast.log
       append: yes
-      #filetype: regular # 'regular', 'unix_stream' or 'unix_dgram'
+      filetype: regular # 'regular', 'unix_stream' or 'unix_dgram'
 
   # Extensible Event Format (nicknamed EVE) event log in JSON format
   - eve-log:
-      enabled: yes
+      enabled: no
       filetype: regular #regular|syslog|unix_dgram|unix_stream|redis
       filename: eve.json
       #prefix: "@cee: " # prefix to prepend to each log entry
@@ -421,7 +421,7 @@ outputs:
   # a full alerts log containing much information for signature writers
   # or for investigating suspected false positives.
   - alert-debug:
-      enabled: no
+      enabled: yes
       filename: alert-debug.log
       append: yes
       #filetype: regular # 'regular', 'unix_stream' or 'unix_dgram'
@@ -477,7 +477,7 @@ outputs:
   # prune" command which can delete files over a certain age.
   - file-store:
       version: 2
-      enabled: no
+      enabled: yes
 
       # Set the directory for the filestore. If the path is not
       # absolute will be be relative to the default-log-dir.
@@ -537,7 +537,7 @@ outputs:
   #
   # Note: limited by stream.reassembly.depth
   - tcp-data:
-      enabled: yes
+      enabled: no
       type: file
       filename: tcp-data.log
 
@@ -595,7 +595,7 @@ logging:
       enabled: yes
       level: info
       filename: suricata.log
-      # type: json
+      type: json
   - syslog:
       enabled: no
       facility: local5
@@ -686,9 +686,9 @@ af-packet:
   # Put default values here. These will be used for an interface that is not
   # in the list above.
   - interface: default
-    #threads: auto
-    #use-mmap: no
-    #tpacket-v3: yes
+      threads: auto
+      #use-mmap: no
+      #tpacket-v3: yes
 
 # Cross platform libpcap capture support
 pcap:
@@ -775,7 +775,7 @@ app-layer:
       #
       # For best performance, select 'bypass'.
       #
-      #encryption-handling: default
+      encryption-handling: default
 
     dcerpc:
       enabled: yes
