@@ -2,8 +2,8 @@
 sudo apt-get -y install libpcre3 libpcre3-dbg libpcre3-dev python-pip python3-yaml \
 build-essential autoconf automake libtool libpcap-dev libnet1-dev \
 libyaml-0-2 libyaml-dev zlib1g zlib1g-dev libcap-ng-dev libcap-ng0 \
-make libmagic-dev libjansson-dev libjansson4 pkg-config
-sudo apt-get -y install libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0 jq
+make libmagic-dev libjansson-dev libjansson4 pkg-config \
+libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libnfnetlink0 jq
 sudo add-apt-repository ppa:oisf/suricata-stable
 sudo apt-get update
 sudo apt-get -y install suricata
